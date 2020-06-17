@@ -2,7 +2,7 @@
     color: #05b;
 }
 
-summary {
+a, summary {
     outline: none;
 }
 
@@ -12,4 +12,8 @@ summary {
 
 nav > ul > li {
     margin: 2em 0 !important;
+}
+
+a.anchor {
+    line-height: 0px;
 }
