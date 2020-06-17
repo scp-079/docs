@@ -1,0 +1,4 @@
+baseURL = "https://docs.scp-079.org"
+languageCode = "zh-cn"
+title = "自建文档"
+theme = "book"
