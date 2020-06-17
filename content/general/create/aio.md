@@ -27,15 +27,15 @@ SCP-079 系列机器人的搭建涉及多个频道、群组、机器人帐号、
 本项目完整实例所需的公开频道有：
 
 - [SCP-079-CAPTCHA](https://t.me/SCP_079_CAPTCHA)
-    - 此频道用于 CAPTCHA 机器人在某些特殊情况下的引用
+    - 此频道用于 CAPTCHA 程序在某些特殊情况下的引用
     - 频道中应提供一个消息，其中包含链接，链接为 CAPTCHA 的专用验证群组的邀请链接，此链接可使用 TIP 的「入群频道」功能生成，以保持定时刷新链接的特性
 - [SCP-079-CONFIG](https://t.me/SCP_079_CONFIG)
-    - 此频道用于 CONFIG 机器人在非私聊的模式下提供设置会话
+    - 此频道用于 CONFIG 程序在非私聊的模式下提供设置会话
 - [SCP-079-CRITICAL](https://t.me/SCP_079_CRITICAL)
-    - 此频道用于 STATUS 机器人更新各节点服务器的状态
-    - 其他各主要 Bot 也应加入此频道，用于汇报各种突发情况
+    - 此频道用于 STATUS 程序更新各节点服务器的状态
+    - 其他各主要程序用于汇报各种突发情况
 - [SCP-079-DEBUG](https://t.me/SCP_079_DEBUG)
-    - 此频道用于各主要 Bot 在其中发送日志记录
+    - 此频道用于各主要程序在其中发送日志记录
 - [SCP-079-ERROR](https://t.me/SCP_079_ERROR)
     - 此频道用于存放因机器人自动识别而产生的误判
 - [SCP-079-LOGGING](https://t.me/SCP_079_LOGGING)
@@ -81,7 +81,13 @@ SCP-079 系列机器人的搭建涉及多个频道、群组、机器人帐号、
 
 {{< hint danger >}}
 **注意**  
+
 以上群组如被设置为公开群组，则可能给服务运行带来严重影响，甚至可能会令使用服务的用户群组遭到恶意破坏。
+
+另外，请关闭其他在普通群组内工作的程序在这些群组中的一切功能，唯有 TIP 程序在 SCP-079-CAPTCHA 内应保持正常工作模式。
+SCP-079-TEST 群组内不必有意关闭各功能，各程序自会区别对待此群组。例如，在 SCP-079-MANAGE 中应关闭 CLEAN 程序的命令回收功能：
+
+`/config_clean bmd off`
 {{< /hint >}}
 
 ---
@@ -90,21 +96,12 @@ SCP-079 系列机器人的搭建涉及多个频道、群组、机器人帐号、
 
 本项目完整实例所需的常规 Bot 有：
 
-- SCP-079-CAPTCHA
-- SCP-079-CLEAN
-- SCP-079-CONFIG
-- SCP-079-HIDE
-- SCP-079-LANG
-- SCP-079-LONG
-- SCP-079-MANAGE
-- SCP-079-NOFLOOD
-- SCP-079-NOPORN
-- SCP-079-NOSPAM
-- SCP-079-PM
-- SCP-079-REGEX
-- SCP-079-STATUS
-- SCP-079-TICKET
-- SCP-079-WARN
+- AIO 机器人
+
+{{< hint info >}}
+**解释**  
+由于启用了 AIO 模式，则理论上只需要创建一个主要机器人。
+{{< /hint >}}
 
 ---
 
@@ -113,8 +110,15 @@ SCP-079 系列机器人的搭建涉及多个频道、群组、机器人帐号、
 本项目完整实例所需的 User Bot 有：
 
 - SCP-079-AVATAR
+    - 可以加入机器人不在的群组，但一定要是对广告把控十分严格的群组
 - SCP-079-USER
+    - 只加入机器人所在的群组
 - SCP-079-WATCH
+    - 加入的群组无要求，以较活跃、杂乱的群组为宜
+
+USER 。
+AVATAR 。
+WATCH 加群就百无禁忌，越热闹越乱越好（
 
 {{< details "什么是 User Bot？" >}}
 所谓 User Bot，就是使用正常 Telegram 人类帐号工作的机器人。
