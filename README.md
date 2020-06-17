@@ -1,8 +1,8 @@
-# Manuals
+# Docs
 
-![github pages](https://github.com/scp-079/manuals/workflows/github%20pages/badge.svg)
+![github pages](https://github.com/scp-079/docs/workflows/github%20pages/badge.svg)
 
-This is the source code for building [manuals.scp-079.org](https://manuals.scp-079.org).
+This is the source code for building [docs.scp-079.org](https://docs.scp-079.org).
 
 ## License
 
