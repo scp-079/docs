@@ -2,6 +2,7 @@
 weight: 30
 title: All-In-One
 type: docs
+summary: 说明如何在 `All-In-One 模式` 下创建内容
 ---
 
 # All-In-One 模式下创建内容
@@ -115,10 +116,6 @@ SCP-079-TEST 群组内不必有意关闭各功能，各程序自会区别对待�
     - 只加入机器人所在的群组
 - SCP-079-WATCH
     - 加入的群组无要求，以较活跃、杂乱的群组为宜
-
-USER 。
-AVATAR 。
-WATCH 加群就百无禁忌，越热闹越乱越好（
 
 {{< details "什么是 User Bot？" >}}
 所谓 User Bot，就是使用正常 Telegram 人类帐号工作的机器人。
