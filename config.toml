@@ -1,7 +1,22 @@
 baseURL = "https://docs.scp-079.org"
-languageCode = "zh-cn"
+languageCode = "zh"
 title = "自建文档"
 theme = "book"
 
+disablePathToLower = true
+enableGitInfo = true
+
+[markup]
 [markup.goldmark.renderer]
   unsafe = true
+
+[markup.tableOfContents]
+  startLevel = 1
+
+[params]
+  BookSection = '*'
+  BookRepo = 'https://github.com/scp-079/docs'
+  BookEditPath = 'edit/master/content'
+  BookDateFormat = 'January 2, 2006'
+  BookComments = false
+
