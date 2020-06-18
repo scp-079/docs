@@ -27,7 +27,7 @@ SCP-079 是一个开源的 Telegram 防广告解决方案，它提供多种工�
 ## 相关链接
 
 - [主站](https://scp-079.org)
-- [使用手册](https://manuals.scp-079.org)（待添加）
+- [使用手册](https://manuals.scp-079.org)
 
 ---
 
