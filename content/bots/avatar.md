@@ -1,6 +1,6 @@
 ---
 title: AVATAR
-summary: 介绍如何在自建事配置 SCP-079-AVATAR
+summary: 介绍如何在自建时配置 SCP-079-AVATAR
 type: docs
 ---
 
