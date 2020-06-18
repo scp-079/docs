@@ -1,8 +1,8 @@
 ---
 weight: 30
 title: All-In-One
-type: docs
 summary: 说明如何在 `All-In-One 模式` 下创建内容
+type: docs
 ---
 
 # All-In-One 模式下创建内容
@@ -101,7 +101,7 @@ SCP-079-TEST 群组内不必有意关闭各功能，各程序自会区别对待�
 
 {{< hint info >}}
 **解释**  
-由于启用了 AIO 模式，则理论上只需要创建一个主要机器人。
+由于启用了 AIO 模式，则理论上只需要创建一个主要 Bot。
 {{< /hint >}}
 
 ---
@@ -124,6 +124,15 @@ SCP-079-TEST 群组内不必有意关闭各功能，各程序自会区别对待�
 {{< hint info >}}
 **提示**  
 对于所有在群组中工作的机器人来说，SCP-079-USER 是工作核心，它们都要求 SCP-079-USER 在群组内协助工作。
+另外，即使您在 AIO 模式下运行服务，我们也建议您将以上三个 User Bot 分开创建，当然，其中只有 USER 是必选的机器人。AVATAR 和 WATCH 可根据实际需要选择是否建立。
 {{< /hint >}}
 
+---
 
+## 获取 ID
+
+您需要对创建的频道、群组、Bot、User Bot 的 Telegram ID 进行记录，以备在机器人的配置中填写。
+
+获取 ID 时，可使用由本项目托管的机器人：[SCP-079-ID](https://t.me/SCP_079_ID_BOT)
+
+SCP-079-ID 的使用方法可通过向该机器人私聊发送 `/start` 获取。 
