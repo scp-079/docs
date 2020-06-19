@@ -105,6 +105,8 @@ source <(curl -s https://raw.githubusercontent.com/scp-079/scripts/master/restor
 
 ## 设置每日定时重启
 
+在新服务器下执行以下命令：
+
 ```bash
 enable 00:00:00
 ```
