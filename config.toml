@@ -13,10 +13,20 @@ enableGitInfo = true
 [markup.tableOfContents]
   startLevel = 1
 
+[menu]
+[[menu.after]]
+  name = "官方 Demo 服务"
+  url = "https://scp-079.org/readme/"
+  weight = 10
+
+[[menu.after]]
+  name = "第三方服务列表"
+  url = "https://scp-079.org/list/"
+  weight = 20
+
 [params]
   BookSection = '*'
   BookRepo = 'https://github.com/scp-079/docs'
   BookEditPath = 'edit/master/content'
   BookDateFormat = 'January 2, 2006'
   BookComments = false
-

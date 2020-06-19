@@ -10,7 +10,7 @@ a, summary {
     font-family: noto sans cjk sc, pingfang sc, microsoft yahei, hiragino sans gb, sans-serif;
 }
 
-nav > ul > li {
+nav > ul {
     margin: 2em 0 !important;
 }
 
