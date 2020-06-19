@@ -40,6 +40,7 @@ type: docs
     - 必选
     - 拥有管理员权限 / 在[隐私设置](https://t.me/BotFather)中开启接收群组内消息的权限
 - SCP-079-TEST
+    - 应具有管理员权限
 
 ---
 

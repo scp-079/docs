@@ -23,9 +23,9 @@ type: docs
 - SCP-079-LOGGING
     - 必选
     - 应具有发送消息的权限
-- SCP-079-HIDE
-    - 应具有发送消息的权限
 - SCP-079-CRITICAL
+    - 应具有发送消息的权限
+- SCP-079-HIDE
     - 应具有发送消息的权限
 
 ---
@@ -35,6 +35,7 @@ type: docs
 - SCP-079-CAPTCHA
     - 应具有删除消息的管理员权限
 - SCP-079-TEST
+    - 应具有管理员权限
 
 ---
 
