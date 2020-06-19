@@ -74,6 +74,11 @@ aio = False
 
 ## 文件 `start.txt`
 
+{{< hint info >}}
+**提示**  
+如果程序在 `All-In-One 模式` 下工作，本程序将忽略 `start.txt` 中的内容，并不会对私聊的 `/start` 命令做出回应。
+{{< /hint >}}
+
 > 这是一个自定义的文件。文件应位于 `start.txt.example` 同目录下。
 >
 > 此文件将作为用户私聊发送 `/start` 命令给机器人时，机器人所发送的消息内容。
