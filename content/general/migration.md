@@ -17,16 +17,12 @@ type: docs
 
 {{< tabs "uniqueid1" >}}
 {{< tab "全部备份" >}}
-### 全部备份
-
 ```bash
 backup
 ```
 {{< /tab >}}
 
 {{< tab "选择性备份" >}}
-### 选择性备份
-
 以 `PM` 为例：
 
 ```bash
@@ -39,8 +35,6 @@ backup pm
 
 {{< tabs "uniqueid2" >}}
 {{< tab "全部备份" >}}
-### 全部备份
-
 ```bash
 ~/scp-079.tar.gz
 ```
@@ -54,8 +48,6 @@ backup pm
 {{< /tab >}}
 
 {{< tab "选择性备份" >}}
-### 选择性备份
-
 以 `PM` 为例：
 
 ```bash
@@ -83,16 +75,12 @@ backup pm
 
 {{< tabs "uniqueid3" >}}
 {{< tab "全部迁移" >}}
-### 全部迁移
-
 ```bash
 source <(curl -s https://raw.githubusercontent.com/scp-079/scripts/master/restore.sh)
 ```
 {{< /tab >}}
 
 {{< tab "选择性迁移" >}}
-### 选择性迁移
-
 以 `PM` 为例：
 
 ```bash
@@ -103,7 +91,7 @@ source <(curl -s https://raw.githubusercontent.com/scp-079/scripts/master/restor
 
 ---
 
-## 设置每日定时重启
+### 设置每日定时重启
 
 在新服务器下执行以下命令：
 
@@ -117,22 +105,18 @@ enable 00:00:00
 
 ---
 
-## 启动服务
+### 启动服务
 
 在新服务器下执行以下命令：
 
 {{< tabs "uniqueid4" >}}
 {{< tab "全部迁移" >}}
-### 全部迁移
-
 ```bash
 refresh
 ```
 {{< /tab >}}
 
 {{< tab "选择性迁移" >}}
-### 选择性迁移
-
 以 `PM` 为例：
 
 ```bash

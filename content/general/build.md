@@ -17,16 +17,12 @@ type: docs
 
 {{< tabs "uniqueid" >}}
 {{< tab "首次搭建" >}}
-### 首次搭建
-
 ```bash
 source <(curl -s https://raw.githubusercontent.com/scp-079/scripts/master/build.sh)
 ```
 {{< /tab >}}
 
 {{< tab "再次搭建" >}}
-### 再次搭建
-
 ```bash
 build
 ```
