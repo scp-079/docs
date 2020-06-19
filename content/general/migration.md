@@ -45,7 +45,7 @@ backup pm
 ~/scp-079.tar.gz
 ```
 
-{{< hint warning >}}
+{{< hint danger >}}
 **注意**  
 
 1. 进行备份后，所有机器人将停止运行。请根据实际需要，选择是否要在备份后在服务器上使用 `refresh` 命令重启所有服务。
@@ -62,7 +62,7 @@ backup pm
 ~/scp-079-pm.tar.gz
 ```
 
-{{< hint warning >}}
+{{< hint danger >}}
 **注意**  
 
 1. 进行备份后，所指定备份的机器人 `PM` 将停止运行。请根据实际需要，选择是否要在备份后在服务器上使用 `start pm` 命令重启该服务。
