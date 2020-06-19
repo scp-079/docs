@@ -77,21 +77,21 @@ backup pm
 
 请确保已按照[「服务器配置」](/general/server/)一节，对新的服务器进行必要的配置。
 
-首先，将备份文件传输至新服务器的 `/home/scp` 目录下，文件所有者应为用户 `scp`。
+首先，将备份文件（`*.tar.gz`）传输至新服务器的 `/home/scp` 目录下，文件所有者应为用户 `scp`。
 
 然后，在新服务器的 `scp` 用户下执行以下命令：
 
 {{< tabs "uniqueid3" >}}
-{{< tab "全部备份" >}}
-### 全部备份
+{{< tab "全部迁移" >}}
+### 全部迁移
 
 ```bash
 source <(curl -s https://raw.githubusercontent.com/scp-079/scripts/master/restore.sh)
 ```
 {{< /tab >}}
 
-{{< tab "选择性备份" >}}
-### 选择性备份
+{{< tab "选择性迁移" >}}
+### 选择性迁移
 
 以 `PM` 为例：
 
@@ -115,11 +115,28 @@ enable 00:00:00
 
 ---
 
-## 启动所有服务
+## 启动服务
+
+{{< tabs "uniqueid4" >}}
+{{< tab "全部迁移" >}}
+### 全部迁移
 
 ```bash
 refresh
 ```
+{{< /tab >}}
+
+{{< tab "选择性迁移" >}}
+### 选择性迁移
+
+以 `PM` 为例：
+
+```bash
+start pm
+```
+{{< /tab >}}
+{{< /tabs >}}
+
 ---
 
 至此，机器人已应成功运行，迁移过程已结束。
