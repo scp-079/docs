@@ -1,12 +1,12 @@
 ---
-title: CLEAN
-summary: 介绍如何在自建时配置 SCP-079-CLEAN
+title: NOPORN
+summary: 介绍如何在自建时配置 SCP-079-NOPORN
 type: docs
 ---
 
-# CLEAN
+# NOPORN
 
-本文介绍搭建 `SCP-079-CLEAN` 的注意事项，以及配置文件中各数值的意义。
+本文介绍搭建 `SCP-079-NOPORN` 的注意事项，以及配置文件中各数值的意义。
 
 请注意先参照[「通用步骤」](/general/)进行配置。
 
@@ -139,38 +139,24 @@ invalid = admin admins BotFather gamebot gif SpamBot Stickers telegram vote
 ; 此处填写不被机器人认为是 Telegram 链接的 username ，用空格分隔，无 @ 前缀
 limit_track = 8
 ; 此处填写整数，代表用户短时间内加入多少群组才被认为是需要特殊对待的用户
-project_link = https://scp-079.org/clean/
+project_link = https://scp-079.org/noporn/
 ; 此处填写项目网址
-project_name = SCP-079-CLEAN
+project_name = SCP-079-NOPORN
 ; 此处填写项目名称
+threshold_porn = 0.8
+; 此处填写 0 到 1 的小数，建议为 0.7 以上
 time_ban = 10800
 ; 建议追踪封禁状态维持的时间，单位为秒
 time_new = 1800
 ; 此处填写整数，代表判断用户为新用户的入群时长，单位为秒
-time_punish = 1
+time_punish = 60
 ; 惩罚用户的时间，期间用户发送的所有消息将被删除，并且，在此期间内若其发送消息将重新计时
 time_short = 300
 ; 此处填写整数，代表判断用户为刚刚入群的入群时长，用户在群组开启新用户限制时使用，单位为秒
-time_sticker = 10800
-; 定时删除贴纸、动图所需的延迟时间，单位为秒
 time_track = 3600
 ; 此处填写整数，代表用户在多短时间内加入多个群组才被认为是需要特殊对待的用户
 zh_cn = True
 ; 此处填写 True 或 False，代表程序是否启用简体中文模式
-
-[emoji]
-emoji_ad_single = 15
-; 此处填写整数，代表多少个同样的 emoji 在消息中出现则被认为是 ad_ 类词组
-emoji_ad_total = 30
-; 此处填写整数，代表一共多少个 emoji 在消息中出现则被认为是 ad_ 类词组
-emoji_many = 15
-; 此处填写整数，代表多少个 emoji 在消息中出现则被认为该消息含有多个 emoji
-emoji_protect = \U0001F642
-; 此处填写字符串，其中包含的 emoji 将受到保护，不计入各类判断中，字符串中间无空格，请以 \UXXXXXXXX 的形式代表一个 emoji
-emoji_wb_single = 10
-; 此处填写整数，代表多少个同样的 emoji 在消息中出现则被认为是 wb 类词组
-emoji_wb_total = 15
-; 此处填写整数，代表一共多少个 emoji 在消息中出现则被认为是 wb 类词组
 
 [encrypt]
 key = [DATA EXPUNGED]
