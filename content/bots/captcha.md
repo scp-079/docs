@@ -158,7 +158,6 @@ font_number = /usr/share/fonts/truetype/freefont/FreeMono.ttf
 noise = 0.4
 ; 此处填写噪声值，推荐 0.3 - 0.5 之间
 
-
 [channels]
 captcha_group_id = [DATA EXPUNGED]
 ; 此处填写 CAPTCHA 专用群组的 ID
