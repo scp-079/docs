@@ -127,12 +127,12 @@ test_group_id = [DATA EXPUNGED]
 [custom]
 aio = False
 ; 此处填写 True 或 False，代表程序是否与其他程序共用同一机器人帐号
-backup = [DATA EXPUNGED]
+backup = False
 ; 此处填写 True 或 False，代表程序是否为备份副本
-date_reset = [DATA EXPUNGED]
+date_reset = 1st mon
 ; 此处填写每月重置数据的日期，例如 1st mon ，代表每月第一个星期一
-default_group_link = [DATA EXPUNGED]
-; 此处填写调试信息中默认的群组链接
+default_group_link = https://t.me/SCP_079_DEBUG
+; 此处填写 DEBUG 频道信息中默认的群组链接
 lang_all = af am an ar as az be bg bn br bs ca cs cy da de dz el en eo es et eu fa fi fo fr ga gl gu he hi hr ht hu hy id is it ja jv ka kk km kn ko ku ky la lb lo lt lv mg mk ml mn mr ms mt nb ne nl nn no oc or pa pl ps pt qu ro ru rw se si sk sl so sq sr sv sw ta te th tl tr ug uk ur vi vo wa xh zu
 ; 此处填写可用语言代号，以空格分隔
 lang_bio = fa
