@@ -1,0 +1,186 @@
+---
+title: LANG
+summary: 介绍如何在自建时配置 SCP-079-LANG
+type: docs
+---
+
+# LANG
+
+本文介绍搭建 `SCP-079-LANG` 的注意事项，以及配置文件中各数值的意义。
+
+请注意先参照[「通用步骤」](/general/)进行配置。
+
+---
+
+## 需要加入的频道
+
+- SCP-079-DEBUG
+    - 必选
+    - 应具有发送消息的权限
+- SCP-079-EXCHANGE
+    - 必选
+    - 应具有发送消息的权限
+- SCP-079-LOGGING
+    - 必选
+    - 应具有发送消息的权限
+- SCP-079-CRITICAL
+- SCP-079-HIDE
+
+---
+
+## 需要加入群组
+
+- SCP-079-TEST
+
+---
+
+## 需要配合其他机器人使用
+
+- SCP-079-USER
+    - 必选
+- SCP-079-REGEX
+    - 推荐
+- SCP-079-NOSPAM
+    - 推荐
+
+---
+
+## 机器人性质
+
+为 `常规 Bot`，需要在 [BotFather](https://t.me/BotFather) 处获取 `bot token`。
+
+---
+
+## 文件 `config.ini`
+
+> 这是一个自定义的文件。文件应位于 `config.ini.example` 同目录下。
+>
+> 需要对 `config.ini` 文件中内容为 `[DATA EXPUNGED]` 的全部键值进行修改。
+>
+> `api_id` 与 `api_hash` 可在[官网](https://my.telegram.org)获取。
+
+```ini
+[pyrogram]
+api_id = [DATA EXPUNGED]
+api_hash = [DATA EXPUNGED]
+; 以上两条信息从官网申请获得
+
+[plugins]
+root = plugins
+include =
+    handlers.command
+    handlers.message
+
+[proxy]
+enabled = False
+; 可根据需要自行决定是否使用 SOCKS5 代理
+hostname = 127.0.0.1
+port = 1080
+
+[basic]
+bot_token = [DATA EXPUNGED]
+; 此处填写在 @BotFather 处获得的 token
+prefix = /!
+; 命令前的可用字符，如在群组中使用非常规命令前缀，需要机器人有获取普通消息的权限
+
+[bots]
+avatar_id = [DATA EXPUNGED]
+; SCP-079-AVATAR 的 ID
+captcha_id = [DATA EXPUNGED]
+; SCP-079-CAPTCHA 的 ID
+clean_id = [DATA EXPUNGED]
+; SCP-079-CLEAN 的 ID
+index_id = [DATA EXPUNGED]
+; SCP-079-INDEX 的 ID
+lang_id = [DATA EXPUNGED]
+; SCP-079-LANG 的 ID
+long_id = [DATA EXPUNGED]
+; SCP-079-LONG 的 ID
+noflood_id = [DATA EXPUNGED]
+; SCP-079-NOFLOOD 的 ID
+noporn_id = [DATA EXPUNGED]
+; SCP-079-NOPORN 的 ID
+recheck_id = 1
+nospam_id = [DATA EXPUNGED]
+; SCP-079-NOSPAM 的 ID
+tip_id = [DATA EXPUNGED]
+; SCP-079-TIP 的 ID
+user_id = [DATA EXPUNGED]
+; SCP-079-USER 的 ID
+warn_id = [DATA EXPUNGED]
+; SCP-079-WARN 的 ID
+
+[channels]
+critical_channel_id = [DATA EXPUNGED]
+; 此处填写紧急频道 SCP-079-CRITICAL 的 ID
+debug_channel_id = [DATA EXPUNGED]
+; 此处填写调试频道 SCP-079-DEBUG 的 ID
+exchange_channel_id = [DATA EXPUNGED]
+; 此处填写数据交换频道 SCP-079-EXCHANGE 的 ID
+hide_channel_id = [DATA EXPUNGED]
+; 此处填写数据交换备份频道 SCP-079-HIDE 的 ID
+logging_channel_id = [DATA EXPUNGED]
+; 此处填写证据存放频道 SCP-079-LOGGING 的 ID
+test_group_id = [DATA EXPUNGED]
+; 此处填写测试群组 SCP-079-TEST 的 ID
+
+[custom]
+aio = False
+; 此处填写 True 或 False，代表程序是否与其他程序共用同一机器人帐号
+backup = [DATA EXPUNGED]
+; 此处填写 True 或 False，代表程序是否为备份副本
+date_reset = [DATA EXPUNGED]
+; 此处填写每月重置数据的日期，例如 1st mon ，代表每月第一个星期一
+default_group_link = [DATA EXPUNGED]
+; 此处填写调试信息中默认的群组链接
+lang_all = af am an ar as az be bg bn br bs ca cs cy da de dz el en eo es et eu fa fi fo fr ga gl gu he hi hr ht hu hy id is it ja jv ka kk km kn ko ku ky la lb lo lt lv mg mk ml mn mr ms mt nb ne nl nn no oc or pa pl ps pt qu ro ru rw se si sk sl so sq sr sv sw ta te th tl tr ug uk ur vi vo wa xh zu
+; 此处填写可用语言代号，以空格分隔
+lang_bio = fa
+; 此处填写默认封禁的简介语言代号，以空格分隔
+lang_name = fa ur ar
+; 此处填写默认封禁的名称语言代号，以空格分隔
+lang_protect = en zh
+; 此处填写受保护的语言代号，以空格分隔
+lang_sticker = fa ar am
+; 此处填写默认删除的贴纸标题语言代号，以空格分隔
+lang_text = fa ur ar am bn bg
+; 此处填写默认删除的文字语言代号，以空格分隔
+limit_track = 8
+; 此处填写整数，代表用户短时间内加入多少群组才被认为是需要特殊对待的用户
+project_link = https://scp-079.org/lang/
+; 此处填写项目网址
+project_name = SCP-079-LANG
+; 此处填写项目名称
+time_ban = 10800
+; 建议追踪封禁状态维持的时间，单位为秒
+time_new = 1800
+; 此处填写整数，代表判断用户为新用户的入群时长，单位为秒
+time_punish = 1
+; 惩罚用户的时间，期间用户发送的所有消息将被删除，并且，在此期间内若其发送消息将重新计时
+time_short = 300
+; 此处填写整数，代表判断用户为刚刚入群的入群时长，用户在群组开启新用户限制时使用，单位为秒
+time_track = 3600
+; 此处填写整数，代表用户在多短时间内加入多个群组才被认为是需要特殊对待的用户
+zh_cn = True
+; 此处填写 True 或 False，代表程序是否启用简体中文模式
+
+[emoji]
+emoji_ad_single = 15
+; 此处填写整数，代表多少个同样的 emoji 在消息中出现则被认为是 ad_ 类词组
+emoji_ad_total = 30
+; 此处填写整数，代表一共多少个 emoji 在消息中出现则被认为是 ad_ 类词组
+emoji_many = 15
+; 此处填写整数，代表多少个 emoji 在消息中出现则被认为该消息含有多个 emoji
+emoji_protect = \U0001F642
+; 此处填写字符串，其中包含的 emoji 将受到保护，不计入各类判断中，字符串中间无空格，请以 \UXXXXXXXX 的形式代表一个 emoji
+emoji_wb_single = 10
+; 此处填写整数，代表多少个同样的 emoji 在消息中出现则被认为是 wb 类词组
+emoji_wb_total = 15
+; 此处填写整数，代表一共多少个 emoji 在消息中出现则被认为是 wb 类词组
+
+[encrypt]
+key = [DATA EXPUNGED]
+; 各机器人加密字符串所用的统一密码，需由程序生成
+password = [DATA EXPUNGED]
+; 各机器人加密文件所用的统一密码，建议为长度 16 及以上的随机字符串
+```

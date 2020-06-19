@@ -108,5 +108,5 @@ zh_cn = True
 
 [encrypt]
 password = [DATA EXPUNGED]
-; 加密文件所用的密码
+; 各机器人加密文件所用的统一密码，建议为长度 16 及以上的随机字符串
 ```
