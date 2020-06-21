@@ -144,6 +144,7 @@ aio = False
 <code>/id</code>
 <i>在本私聊对话中发送此命令，将获得您的用户 ID</i>
 
+<code>/id username</code>
 <code>/id @username</code>
 <code>/id https://t.me/username</code>
 <i>在本私聊对话中发送此命令，将获得 @username 的 ID</i>
