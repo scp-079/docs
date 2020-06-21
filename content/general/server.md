@@ -28,6 +28,7 @@ bash <(curl -s https://raw.githubusercontent.com/scp-079/scripts/master/root.sh)
 
 1. 此脚本将提示您为创建的新用户 `scp` 指定一个密码，请设置较强壮的密码。
 2. 执行此脚本后，系统的时区将被调整为 UTC，我们建议用户使用 UTC 时区，并且请在进行有关时间点的配置时，考虑到系统的时区、时间点的配置，对服务所面向的主要群体的影响。
+<br /><br />
 {{< /hint >}}
 
 ---
