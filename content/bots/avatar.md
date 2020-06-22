@@ -139,11 +139,11 @@ backup = False
 [time]
 date_reset = 1st mon
 ; 此处填写每月重置数据的日期，例如 1st mon ，代表每月第一个星期一
-time_begin = [DATA EXPUNGED]
+time_begin = 0
 ; 此处填写 0 到 23 之间的整数，代表统计用户发言自定义时段的开始时间
-time_check = [DATA EXPUNGED]
+time_check = 5
 ; 此处填写 0 到 23 之间的整数，代表每日自动生成全局白名单的时间点
-time_end = [DATA EXPUNGED]
+time_end = 12
 ; 此处填写 0 到 23 之间的整数，代表统计用户发言自定义时段的结束时间
 time_new = 1800
 ; 此处填写整数，代表判断用户为新用户的入群时长，用于进行头像复查，单位为秒
