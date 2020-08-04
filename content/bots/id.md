@@ -80,7 +80,7 @@ aio = False
 如果程序在 `All-In-One 模式` 下工作，本程序将忽略 `start.txt` 中的内容，并不会对私聊的 `/start` 命令做出回应。
 {{< /hint >}}
 
-> 这是一个自定义的文件。文件应位于 `data/config/` 目录下，可参照 `examples/config.ini` 的格式进行设置。
+> 这是一个自定义的文件。文件应位于 `data/config/` 目录下，可参照 `examples/start.txt` 的格式进行设置。
 >
 > 此文件将作为用户私聊发送 `/start` 命令给机器人时，机器人所发送的消息内容。
 >
