@@ -28,7 +28,7 @@ type: docs
 
 ## 文件 `config.ini`
 
-> 这是一个自定义的文件。文件应位于 `config.ini.example` 同目录下。
+> 这是一个自定义的文件。文件应位于 `data/config/` 目录下，可参照 `examples/config.ini` 的格式进行设置。
 >
 > 需要对 `config.ini` 文件中内容为 `[DATA EXPUNGED]` 的全部键值进行修改。
 >
@@ -80,7 +80,7 @@ aio = False
 如果程序在 `All-In-One 模式` 下工作，本程序将忽略 `start.txt` 中的内容，并不会对私聊的 `/start` 命令做出回应。
 {{< /hint >}}
 
-> 这是一个自定义的文件。文件应位于 `start.txt.example` 同目录下。
+> 这是一个自定义的文件。文件应位于 `data/config/` 目录下，可参照 `examples/config.ini` 的格式进行设置。
 >
 > 此文件将作为用户私聊发送 `/start` 命令给机器人时，机器人所发送的消息内容。
 >
@@ -161,7 +161,7 @@ aio = False
 
 <code>------------------------</code>
 
-<b>注 1：</b>当检查群组和频道的 ID 时，还将同时检查群组或频道是否收到 Telegram 限制，如果受限，将同时显示受限理由等信息。
+<b>注 1：</b>当检查 ID 时，还将同时检查该对象是否收到 Telegram 限制，如果受限，将同时显示受限理由等信息。
 
 <b>注 2：</b>如在群组中发送 <code>/id</code> 没有反应，请尝试将机器人设置为任意权限的管理员。
 
@@ -169,4 +169,5 @@ aio = False
 
 文档 || https://scp-079.org/id/
 源码 || https://github.com/scp-079/scp-079-id/
+提交需求 || https://github.com/scp-079/scp-079-id/issues
 ```
