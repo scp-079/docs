@@ -33,7 +33,7 @@ type: docs
 
 ## 文件 `config.ini`
 
-> 这是一个自定义的文件。文件应位于 `config.ini.example` 同目录下。
+> 这是一个自定义的文件。文件应位于 `data/config/` 目录下，可参照 `examples/config.ini` 的格式进行设置。
 >
 > 需要对 `config.ini` 文件中内容为 `[DATA EXPUNGED]` 的全部键值进行修改。
 >
@@ -87,7 +87,7 @@ lang = cmn-Hans
 
 ## 文件 `report.txt`
 
-> 这是一个自定义的文件。文件应位于 `report.txt.example` 同目录下。
+> 这是一个自定义的文件。文件应位于 `data/config/` 目录下，可参照 `examples/report.txt` 的格式进行设置。
 >
 > 此文件将作为机器人通过 `/send` 命令触发后，机器人在指定频道所发送的消息内容的模板。
 >
