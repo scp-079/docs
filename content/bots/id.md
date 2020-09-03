@@ -62,6 +62,10 @@ prefix = /!
 test_group_id = 0
 ; 此处填写测试群组 SCP-079-TEST 的 ID
 
+[custom]
+manual_link = https://manuals.scp-079.org/bots/id/
+; 此处填写使用手册的链接
+
 [language]
 lang = cmn-Hans
 ; 此处填写 languages 文件夹下所包含的 YAML 文件的对应名称

@@ -77,6 +77,8 @@ format_time = %H:%M:%S
 ; 此处自定义显示时间时所使用的格式
 interval = 3
 ; 此处填写正整数，表示更新状态的时间间隔，建议不小于 3，否则机器人可能频繁受到编辑消息的频率限制
+manual_link = https://manuals.scp-079.org/bots/status/
+; 此处填写使用手册的链接
 
 [language]
 lang = cmn-Hans
