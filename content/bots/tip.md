@@ -138,8 +138,6 @@ exchange_channel_id = [DATA EXPUNGED]
 ; 此处填写数据交换频道 SCP-079-EXCHANGE 的 ID
 hide_channel_id = [DATA EXPUNGED]
 ; 此处填写数据交换备份频道 SCP-079-HIDE 的 ID
-logging_channel_id = [DATA EXPUNGED]
-; 此处填写证据存放频道 SCP-079-LOGGING 的 ID
 test_group_id = [DATA EXPUNGED]
 ; 此处填写测试群组 SCP-079-TEST 的 ID
 tip_channel_id = [DATA EXPUNGED]
@@ -257,7 +255,7 @@ time_welcome = 180
 ★ 群组可自定义多个关键词回复。
 ★ 具体关键词的回复可单独自定义触发时采取的操作，例如：仅发送预设回复消息、删除原消息、移除用户、禁言用户（可自定义时长）、封禁用户（可自定义时长）。
 ★ 具体关键词的回复可单独自定义何人可触发，例如：普通成员、管理员、所有人。
-★ 具体关键词的回复可单独自定义判断触发的多种模式，例如：包含匹配、全匹配、大小写敏感、仅对用户名和转发来源名触发、过滤名称内干扰符号、仅对转发的消息触发。
+★ 具体关键词的回复可单独自定义判断触发的多种模式，例如：包含匹配、全匹配、大小写敏感、仅对媒体消息的附文触发、仅对用户名和转发来源名触发、过滤名称内干扰符号、仅对转发的消息触发、使用正则匹配模式。
 ★ 具体关键词的回复可单独自定义销毁时间。
 ★ 支持用户点击消息按钮后，机器人自动发送群组预设消息。
 ★ 对于自定义关键词，将保留触发的统计数据以供查询。
@@ -278,4 +276,5 @@ time_welcome = 180
 申请使用 || https://scp-079.org/ApplyForUse/
 提交需求 || https://github.com/scp-079/scp-079-tip/issues
 更多功能 || https://scp-079.org/bots/
+证据频道 || https://t.me/joinchat/AAAAAEvUk6RSwpkn_RSM9A
 ```
