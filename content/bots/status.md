@@ -117,7 +117,7 @@ CPU 总占用：<code>$cpu_percent$</code>
 CPU 各核心占用情况:
 $cpu_percent_per$
 
-内存总量: <code>$memory_total$</code>
+内存总量：<code>$memory_total$</code>
 空闲内存：<code>$memory_available$</code>
 内存占用比：<code>$memory_percent$</code>
 SWAP 总量：<code>$swap_total$</code>
