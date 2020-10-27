@@ -1,0 +1,130 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="介绍如何在自建时配置 SCP-079-NOSPAM"><meta name=theme-color content="#FFFFFF"><meta property="og:title" content="NOSPAM"><meta property="og:description" content="介绍如何在自建时配置 SCP-079-NOSPAM"><meta property="og:type" content="article"><meta property="og:url" content="https://docs.scp-079.org/bots/nospam/"><meta property="article:modified_time" content="2020-06-19T14:39:05+00:00"><title>NOSPAM | 自建文档</title><link rel=manifest href=/manifest.json><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.b3215d9d1d18d9051e7fbe8f256ff80e30f41d29073b86348e230d297b771002.css integrity="sha256-syFdnR0Y2QUef76PJW/4DjD0HSkHO4Y0jiMNKXt3EAI="><link rel=stylesheet href=/css/custom.css><script defer src=/en.search.min.4dbfede87f05e4050467f7d4cda6a7b5f939dc7ed1bbe4524ad0f6d5194f5192.js integrity="sha256-Tb/t6H8F5AUEZ/fUzaantfk53H7Ru+RSStD21RlPUZI="></script></head><body><input type=checkbox class=hidden id=menu-control><main class="container flex"><aside class=book-menu><nav><h2 class=book-brand><a href=/><span>自建文档</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li class=book-section-flat><a href=/general/>通用步骤</a><ul><li><a href=/general/create/ class=collapsed>创建内容</a></li><li><a href=/general/server/>服务器设置</a></li><li><a href=/general/build/>开始搭建</a></li><li><a href=/general/maintain/>日常维护</a></li><li><a href=/general/migration/>备份与迁移</a></li></ul></li><li class=book-section-flat><a href=/bots/ class=collapsed>机器人配置</a><ul><li><a href=/bots/avatar/>AVATAR</a></li><li><a href=/bots/captcha/>CAPTCHA</a></li><li><a href=/bots/clean/>CLEAN</a></li><li><a href=/bots/config/>CONFIG</a></li><li><a href=/bots/hide/>HIDE</a></li><li><a href=/bots/id/>ID</a></li><li><a href=/bots/lang/>LANG</a></li><li><a href=/bots/long/>LONG</a></li><li><a href=/bots/manage/>MANAGE</a></li><li><a href=/bots/noflood/>NOFLOOD</a></li><li><a href=/bots/noporn/>NOPORN</a></li><li><a href=/bots/nospam/ class=active>NOSPAM</a></li><li><a href=/bots/pm/>PM</a></li><li><a href=/bots/regex/>REGEX</a></li><li><a href=/bots/status/>STATUS</a></li><li><a href=/bots/tip/>TIP</a></li><li><a href=/bots/user/>USER</a></li><li><a href=/bots/warn/>WARN</a></li><li><a href=/bots/watch/>WATCH</a></li></ul></li></ul><ul><li><a href=https://scp-079.org/readme/ target=_blank rel=noopener>官方 Demo 服务</a></li><li><a href=https://scp-079.org/list/ target=_blank rel=noopener>第三方服务列表</a></li></ul></nav><script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu></label>
+<strong>NOSPAM</strong>
+<label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><input type=checkbox class=hidden id=toc-control><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#nospam>NOSPAM</a><ul><li><a href=#需要加入的频道>需要加入的频道</a></li><li><a href=#需要加入群组>需要加入群组</a></li><li><a href=#需要配合其他机器人使用>需要配合其他机器人使用</a></li><li><a href=#机器人性质>机器人性质</a></li><li><a href=#文件-configini>文件 <code>config.ini</code></a></li></ul></li></ul></nav></aside></header><article class=markdown><h1 id=nospam>NOSPAM
+<a class=anchor href=#nospam>#</a></h1><p>本文介绍搭建 <code>SCP-079-NOSPAM</code> 的注意事项，以及配置文件中各数值的意义。</p><p>请注意先参照<a href=/general/>「通用步骤」</a>进行配置。</p><hr><h2 id=需要加入的频道>需要加入的频道
+<a class=anchor href=#%e9%9c%80%e8%a6%81%e5%8a%a0%e5%85%a5%e7%9a%84%e9%a2%91%e9%81%93>#</a></h2><ul><li>SCP-079-DEBUG<ul><li>必选</li><li>应具有发送消息的权限</li></ul></li><li>SCP-079-EXCHANGE<ul><li>必选</li><li>应具有发送消息的权限</li></ul></li><li>SCP-079-LOGGING<ul><li>必选</li><li>应具有发送消息的权限</li></ul></li><li>SCP-079-CRITICAL<ul><li>应具有发送消息的权限</li></ul></li><li>SCP-079-HIDE<ul><li>应具有发送消息的权限</li></ul></li></ul><hr><h2 id=需要加入群组>需要加入群组
+<a class=anchor href=#%e9%9c%80%e8%a6%81%e5%8a%a0%e5%85%a5%e7%be%a4%e7%bb%84>#</a></h2><ul><li>SCP-079-TEST<ul><li>应具有管理员权限</li></ul></li></ul><hr><h2 id=需要配合其他机器人使用>需要配合其他机器人使用
+<a class=anchor href=#%e9%9c%80%e8%a6%81%e9%85%8d%e5%90%88%e5%85%b6%e4%bb%96%e6%9c%ba%e5%99%a8%e4%ba%ba%e4%bd%bf%e7%94%a8>#</a></h2><ul><li>SCP-079-REGEX<ul><li>必选</li></ul></li><li>SCP-079-USER<ul><li>必选</li></ul></li><li>SCP-079-CAPTCHA<ul><li>推荐</li></ul></li><li>SCP-079-WATCH<ul><li>推荐</li></ul></li></ul><hr><h2 id=机器人性质>机器人性质
+<a class=anchor href=#%e6%9c%ba%e5%99%a8%e4%ba%ba%e6%80%a7%e8%b4%a8>#</a></h2><p>为 <code>常规 Bot</code>，需要在 <a href=https://t.me/BotFather>BotFather</a> 处获取 <code>bot token</code>。</p><hr><h2 id=文件-configini>文件 <code>config.ini</code>
+<a class=anchor href=#%e6%96%87%e4%bb%b6-configini>#</a></h2><blockquote><p>这是一个自定义的文件。文件应位于 <code>config.ini.example</code> 同目录下。</p><p>需要对 <code>config.ini</code> 文件中内容为 <code>[DATA EXPUNGED]</code> 的全部键值进行修改。</p><p><code>api_id</code> 与 <code>api_hash</code> 可在<a href=https://my.telegram.org>官网</a>获取。</p></blockquote><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ini data-lang=ini><span style=color:#66d9ef>[pyrogram]</span>
+<span style=color:#a6e22e>api_id</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>[DATA EXPUNGED]</span>
+<span style=color:#a6e22e>api_hash</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>[DATA EXPUNGED]</span>
+<span style=color:#75715e>; 以上两条信息从官网申请获得</span>
+
+<span style=color:#66d9ef>[plugins]</span>
+<span style=color:#a6e22e>root</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>plugins</span>
+<span style=color:#a6e22e>include</span> <span style=color:#f92672>=</span><span style=color:#e6db74>
+</span><span style=color:#e6db74>    handlers.command
+</span><span style=color:#e6db74>    handlers.message</span>
+
+<span style=color:#66d9ef>[proxy]</span>
+<span style=color:#a6e22e>enabled</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>False</span>
+<span style=color:#75715e>; 可根据需要自行决定是否使用 SOCKS5 代理</span>
+<span style=color:#a6e22e>hostname</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>127.0.0.1</span>
+<span style=color:#a6e22e>port</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>1080</span>
+
+<span style=color:#66d9ef>[basic]</span>
+<span style=color:#a6e22e>bot_token</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>[DATA EXPUNGED]</span>
+<span style=color:#75715e>; 此处填写在 @BotFather 处获得的 token</span>
+<span style=color:#a6e22e>prefix</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>/!</span>
+<span style=color:#75715e>; 命令前的可用字符，如在群组中使用非常规命令前缀，需要机器人有获取普通消息的权限</span>
+
+<span style=color:#66d9ef>[bots]</span>
+<span style=color:#a6e22e>avatar_id</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>[DATA EXPUNGED]</span>
+<span style=color:#75715e>; SCP-079-AVATAR 的 ID</span>
+<span style=color:#a6e22e>captcha_id</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>[DATA EXPUNGED]</span>
+<span style=color:#75715e>; SCP-079-CAPTCHA 的 ID</span>
+<span style=color:#a6e22e>clean_id</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>[DATA EXPUNGED]</span>
+<span style=color:#75715e>; SCP-079-CLEAN 的 ID</span>
+<span style=color:#a6e22e>index_id</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>[DATA EXPUNGED]</span>
+<span style=color:#75715e>; SCP-079-INDEX 的 ID</span>
+<span style=color:#a6e22e>lang_id</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>[DATA EXPUNGED]</span>
+<span style=color:#75715e>; SCP-079-LANG 的 ID</span>
+<span style=color:#a6e22e>long_id</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>[DATA EXPUNGED]</span>
+<span style=color:#75715e>; SCP-079-LONG 的 ID</span>
+<span style=color:#a6e22e>noflood_id</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>[DATA EXPUNGED]</span>
+<span style=color:#75715e>; SCP-079-NOFLOOD 的 ID</span>
+<span style=color:#a6e22e>noporn_id</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>[DATA EXPUNGED]</span>
+<span style=color:#75715e>; SCP-079-NOPORN 的 ID</span>
+<span style=color:#a6e22e>recheck_id</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>1</span>
+<span style=color:#a6e22e>nospam_id</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>[DATA EXPUNGED]</span>
+<span style=color:#75715e>; SCP-079-NOSPAM 的 ID</span>
+<span style=color:#a6e22e>tip_id</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>[DATA EXPUNGED]</span>
+<span style=color:#75715e>; SCP-079-TIP 的 ID</span>
+<span style=color:#a6e22e>user_id</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>[DATA EXPUNGED]</span>
+<span style=color:#75715e>; SCP-079-USER 的 ID</span>
+<span style=color:#a6e22e>warn_id</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>[DATA EXPUNGED]</span>
+<span style=color:#75715e>; SCP-079-WARN 的 ID</span>
+
+<span style=color:#66d9ef>[channels]</span>
+<span style=color:#a6e22e>critical_channel_id</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>[DATA EXPUNGED]</span>
+<span style=color:#75715e>; 此处填写紧急频道 SCP-079-CRITICAL 的 ID</span>
+<span style=color:#a6e22e>debug_channel_id</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>[DATA EXPUNGED]</span>
+<span style=color:#75715e>; 此处填写调试频道 SCP-079-DEBUG 的 ID</span>
+<span style=color:#a6e22e>exchange_channel_id</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>[DATA EXPUNGED]</span>
+<span style=color:#75715e>; 此处填写数据交换频道 SCP-079-EXCHANGE 的 ID</span>
+<span style=color:#a6e22e>hide_channel_id</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>[DATA EXPUNGED]</span>
+<span style=color:#75715e>; 此处填写数据交换备份频道 SCP-079-HIDE 的 ID</span>
+<span style=color:#a6e22e>logging_channel_id</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>[DATA EXPUNGED]</span>
+<span style=color:#75715e>; 此处填写证据存放频道 SCP-079-LOGGING 的 ID</span>
+<span style=color:#a6e22e>test_group_id</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>[DATA EXPUNGED]</span>
+<span style=color:#75715e>; 此处填写测试群组 SCP-079-TEST 的 ID</span>
+<span style=color:#a6e22e>watch_channel_id</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>[DATA EXPUNGED]</span>
+<span style=color:#75715e>; 此处填写敏感追踪证据频道 SCP-079-WATCH 的 ID</span>
+
+<span style=color:#66d9ef>[custom]</span>
+<span style=color:#a6e22e>aio</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>False</span>
+<span style=color:#75715e>; 此处填写 True 或 False，代表程序是否与其他程序共用同一机器人帐号</span>
+<span style=color:#a6e22e>backup</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>False</span>
+<span style=color:#75715e>; 此处填写 True 或 False，代表程序是否为备份副本</span>
+<span style=color:#a6e22e>date_reset</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>1st mon</span>
+<span style=color:#75715e>; 此处填写每月重置数据的日期，例如 1st mon ，代表每月第一个星期一</span>
+<span style=color:#a6e22e>default_group_link</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>https://t.me/SCP_079_DEBUG</span>
+<span style=color:#75715e>; 此处填写 DEBUG 频道信息中默认的群组链接</span>
+<span style=color:#a6e22e>image_size</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>2097152</span>
+<span style=color:#75715e>; 此处填写整数，代表分析图片文档的最大大小，超过此大小则不通过下载原文件进行二维码，单位为 B</span>
+<span style=color:#a6e22e>invalid</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>admin admins BotFather gamebot gif SpamBot Stickers telegram vote</span>
+<span style=color:#75715e>; 此处填写不被机器人认为是 Telegram 链接的 username ，用空格分隔，无 @ 前缀</span>
+<span style=color:#a6e22e>limit_track</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>8</span>
+<span style=color:#75715e>; 此处填写整数，代表用户短时间内加入多少群组才被认为是需要特殊对待的用户</span>
+<span style=color:#a6e22e>project_link</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>https://scp-079.org/nospam/</span>
+<span style=color:#75715e>; 此处填写项目网址</span>
+<span style=color:#a6e22e>project_name</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>SCP-079-NOSPAM</span>
+<span style=color:#75715e>; 此处填写项目名称</span>
+<span style=color:#a6e22e>time_captcha</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>10</span>
+<span style=color:#75715e>; 此处填写整数，代表操作降级情况下，消息被发送和降级操作之间的时间差，超过此时长机器人将立即删除用户的全部消息，而不是令 CAPTCHA 发起新验证请求，单位为秒</span>
+<span style=color:#a6e22e>time_long</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>7776000</span>
+<span style=color:#75715e>; 此处填写整数，代表判断用户为老用户的入群时长，单位为秒</span>
+<span style=color:#a6e22e>time_new</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>1800</span>
+<span style=color:#75715e>; 此处填写整数，代表判断用户为新用户的入群时长，单位为秒</span>
+<span style=color:#a6e22e>time_punish</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>1</span>
+<span style=color:#75715e>; 惩罚用户的时间，期间用户发送的所有消息将被删除，并且，在此期间内若其发送消息将重新计时</span>
+<span style=color:#a6e22e>time_short</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>300</span>
+<span style=color:#75715e>; 此处填写整数，代表判断用户为刚刚入群的入群时长，用户在群组开启新用户限制时使用，单位为秒</span>
+<span style=color:#a6e22e>time_track</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>3600</span>
+<span style=color:#75715e>; 此处填写整数，代表用户在多短时间内加入多个群组才被认为是需要特殊对待的用户</span>
+<span style=color:#a6e22e>zh_cn</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>True</span>
+<span style=color:#75715e>; 此处填写 True 或 False，代表程序是否启用简体中文模式</span>
+
+<span style=color:#66d9ef>[emoji]</span>
+<span style=color:#a6e22e>emoji_ad_single</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>15</span>
+<span style=color:#75715e>; 此处填写整数，代表多少个同样的 emoji 在消息中出现则被认为是 ad_ 类词组</span>
+<span style=color:#a6e22e>emoji_ad_total</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>30</span>
+<span style=color:#75715e>; 此处填写整数，代表一共多少个 emoji 在消息中出现则被认为是 ad_ 类词组</span>
+<span style=color:#a6e22e>emoji_many</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>15</span>
+<span style=color:#75715e>; 此处填写整数，代表多少个 emoji 在消息中出现则被认为该消息含有多个 emoji</span>
+<span style=color:#a6e22e>emoji_protect</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>\U0001F642</span>
+<span style=color:#75715e>; 此处填写字符串，其中包含的 emoji 将受到保护，不计入各类判断中，字符串中间无空格，请以 \UXXXXXXXX 的形式代表一个 emoji</span>
+<span style=color:#a6e22e>emoji_wb_single</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>10</span>
+<span style=color:#75715e>; 此处填写整数，代表多少个同样的 emoji 在消息中出现则被认为是 wb 类词组</span>
+<span style=color:#a6e22e>emoji_wb_total</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>15</span>
+<span style=color:#75715e>; 此处填写整数，代表一共多少个 emoji 在消息中出现则被认为是 wb 类词组</span>
+
+<span style=color:#66d9ef>[encrypt]</span>
+<span style=color:#a6e22e>key</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>[DATA EXPUNGED]</span>
+<span style=color:#75715e>; 加密字符串所用的密码</span>
+<span style=color:#a6e22e>password</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>[DATA EXPUNGED]</span>
+<span style=color:#75715e>; 加密文件所用的密码</span>
+</code></pre></div></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/scp-079/docs/commit/c56aa26c4449536c958d8e0fa0dd505a8c3e9db0 title="Last modified by Xiao | June 19, 2020" target=_blank rel=noopener><img src=/svg/calendar.svg class=book-icon alt=Calendar>
+<span>June 19, 2020</span></a></div><div><a class="flex align-center" href=https://github.com/scp-079/docs/edit/master/content//bots/nospam.md target=_blank rel=noopener><img src=/svg/edit.svg class=book-icon alt=Edit>
+<span>Edit this page</span></a></div></div><script>function targetBlank(){var internal=location.host.replace("www.","");var a=document.getElementsByTagName('a');for(var i=0;i<a.length;i++){var the_host=a[i].host.replace("www.","");if(the_host!=internal){a[i].setAttribute('target','_blank');}}};targetBlank();</script></footer><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><nav id=TableOfContents><ul><li><a href=#nospam>NOSPAM</a><ul><li><a href=#需要加入的频道>需要加入的频道</a></li><li><a href=#需要加入群组>需要加入群组</a></li><li><a href=#需要配合其他机器人使用>需要配合其他机器人使用</a></li><li><a href=#机器人性质>机器人性质</a></li><li><a href=#文件-configini>文件 <code>config.ini</code></a></li></ul></li></ul></nav></aside></main></body></html>

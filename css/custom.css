@@ -1,0 +1,19 @@
+.markdown a:visited {
+    color: #05b;
+}
+
+a, summary {
+    outline: none;
+}
+
+.markdown {
+    font-family: noto sans cjk sc, pingfang sc, microsoft yahei, hiragino sans gb, sans-serif;
+}
+
+nav > ul {
+    margin: 2em 0 !important;
+}
+
+a.anchor {
+    line-height: 0px;
+}
